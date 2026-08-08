@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Summa Verus — Contabilidade</title>
+<meta name="description" content="Summa Verus Contabilidade, Lda. Rigor, confiança e proximidade na gestão do seu negócio." />
+<link rel="icon" type="image/png" href="/assets/icon.png" />
+<style>
+  :root {
+    --navy: #1B2A3D;
+    --navy-deep: #131F2E;
+    --gold: #A9824B;
+    --cream: #F1ECE1;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: var(--navy);
+    color: var(--cream);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle at 50% 20%, var(--navy) 0%, var(--navy-deep) 100%);
+  }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6vh 1.5rem 4vh;
+  }
+  .icon {
+    width: 64px;
+    height: auto;
+    margin-bottom: 1.75rem;
+    opacity: 0.95;
+  }
+  h1 {
+    margin: 0;
+    font-weight: 400;
+    font-size: clamp(2.4rem, 7vw, 4rem);
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+  }
+  h1 .verus {
+    color: var(--gold);
+    display: block;
+    font-size: clamp(2.1rem, 6vw, 3.4rem);
+    margin-top: 0.1em;
+  }
+  .tagline {
+    margin: 1.5rem 0 0;
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    color: rgba(241, 236, 225, 0.75);
+    max-width: 34rem;
+    line-height: 1.6;
+    font-style: italic;
+  }
+  .cta {
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 0.9rem 2.4rem;
+    border: 1px solid var(--gold);
+    color: var(--cream);
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+  .cta:hover {
+    background-color: var(--gold);
+    color: var(--navy-deep);
+  }
+  footer {
+    text-align: center;
+    padding: 1.5rem 1rem 2rem;
+    font-family: Georgia, serif;
+    font-size: 0.8rem;
+    color: rgba(241, 236, 225, 0.45);
+    border-top: 1px solid rgba(241, 236, 225, 0.12);
+  }
+  footer p {
+    margin: 0.2rem 0;
+  }
+</style>
+</head>
+<body>
+  <main>
+    <img class="icon" src="/assets/icon.png" alt="Summa Verus" />
+    <h1>Summa<span class="verus">Verus</span></h1>
+    <p class="tagline">Rigor, confiança e proximidade na gestão do seu negócio.</p>
+    <a class="cta" href="https://summa-verus-portal-dev.vercel.app" target="_blank" rel="noopener">Aceder ao Portal</a>
+  </main>
+  <footer>
+    <p>Avenida do Autarca, n.º 83 · 1º piso · 4730-072 Barbudo VVD</p>
+    <p>NIF 505 462 460 · summaverus.com</p>
+  </footer>
+</body>
+</html>
