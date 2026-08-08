@@ -1,0 +1,108 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 78%);
+}
+
+.hero__glow {
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(circle at 50% 15%, rgba(169, 130, 75, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(44, 80, 117, 0.5) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.hero__mark {
+  width: 68px;
+  margin-bottom: 1.75rem;
+  animation: hero-in 0.9s ease both;
+}
+
+.hero__eyebrow {
+  animation: hero-in 0.9s ease both 0.1s;
+}
+
+.hero__title {
+  color: var(--cream);
+  font-size: clamp(2.6rem, 7vw, 4.4rem);
+  letter-spacing: 0.01em;
+  animation: hero-in 0.9s ease both 0.18s;
+}
+.hero__title span { color: var(--gold); }
+
+.hero__tagline {
+  margin-top: 1.5rem;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: rgba(241, 236, 225, 0.78);
+  max-width: 36rem;
+  font-style: italic;
+  font-family: var(--font-display);
+  animation: hero-in 0.9s ease both 0.26s;
+}
+
+.hero__actions {
+  margin-top: 2.75rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: hero-in 0.9s ease both 0.34s;
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26px;
+  height: 42px;
+  border: 1px solid rgba(241, 236, 225, 0.4);
+  border-radius: 14px;
+}
+.hero__scroll span {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--gold);
+  animation: scroll-dot 1.8s ease infinite;
+}
+
+@keyframes scroll-dot {
+  0% { opacity: 1; transform: translate(-50%, 0); }
+  70% { opacity: 0; transform: translate(-50%, 14px); }
+  100% { opacity: 0; transform: translate(-50%, 14px); }
+}
+
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__mark, .hero__eyebrow, .hero__title, .hero__tagline, .hero__actions {
+    animation: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero__scroll { display: none; }
+}
