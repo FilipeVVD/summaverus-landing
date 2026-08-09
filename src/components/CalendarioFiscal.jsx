@@ -77,9 +77,16 @@ export default function CalendarioFiscal() {
                   <Reveal as="div" key={p.id} delay={i * 60} className="calendario-item">
                     <div className="calendario-item__date">{p.dataFormatada}</div>
                     <div className="calendario-item__body">
-                      <h4>{p.titulo}</h4>
+                      <div className="calendario-item__titulo-linha">
+                        <h4>{p.titulo}</h4>
+                        {p.descricao && (
+                          <span className="calendario-item__info" tabIndex={0}>
+                            <Icon name="info" size={15} />
+                            <span className="calendario-item__tooltip">{p.descricao}</span>
+                          </span>
+                        )}
+                      </div>
                       {p.referencia && <p className="calendario-item__referencia">{p.referencia}</p>}
-                      {p.descricao && <p>{p.descricao}</p>}
                     </div>
                   </Reveal>
                 ))}

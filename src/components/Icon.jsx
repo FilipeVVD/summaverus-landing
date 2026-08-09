@@ -1,4 +1,10 @@
 const PATHS = {
+  info: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 11v5.5M12 8v.01" />
+    </>
+  ),
   ledger: (
     <>
       <rect x="4" y="3" width="16" height="18" rx="1.5" />
