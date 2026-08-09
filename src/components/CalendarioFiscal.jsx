@@ -10,8 +10,8 @@ const API_URL = 'https://summa-verus-portal-dev.vercel.app/api/calendario-public
 const MESES = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez']
 
 function formatarData(iso) {
-  const [, mes, dia] = iso.split('-').map(Number)
-  return `${String(dia).padStart(2, '0')} ${MESES[mes - 1]}`
+  const [ano, mes, dia] = iso.split('-').map(Number)
+  return `${String(dia).padStart(2, '0')} ${MESES[mes - 1]} ${ano}`
 }
 
 function normalizarApi(evento, i) {
